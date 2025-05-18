@@ -1,0 +1,441 @@
+/* ========================
+  SEÇÃO: ABOUT US
+======================== */
+.about-us h2,
+.about-us-second-header h2 {
+  font-size: var(--fs-h2);
+}
+
+.about-us-header h2 {
+  font-size: 65px;
+}
+
+.about-us p,
+.about-us-header p,
+.about-us-second-container p {
+  line-height: 1.6;
+  color: var(--color-primary);
+}
+
+.about-us-header p,
+.about-us-first-container p {
+  font-size: 30px;
+}
+
+.about-us-text {
+  padding: 2vw 5vw;
+}
+.line {
+  padding-bottom: 50px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.icon-mastercard,
+.icon-mastercard img {
+  display: inline-block;
+  vertical-align: middle; /* alinha o ícone no meio da linha de texto */
+}
+
+.icon-mastercard img {
+  width: 3em; /* tamanho igual ao font‐size do texto */
+  height: auto;
+  margin: 0 0.25em; /* espaço antes e depois do logo */
+}
+
+.about-us-header p {
+  padding-top: 20px;
+}
+
+.about-us-second-container mark {
+  background-color: var(--highlight-bg);
+  color: var(--color-primary);
+  padding: 0 2px;
+}
+
+.about-us-first-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-us-header,
+.about-us-first-section {
+  padding: 2vw 5vw;
+}
+
+.about-us-title {
+  font-size: 3.5rem;
+  font-family: var(--font-extra-bold);
+  font-weight: bold;
+  line-height: 1;
+}
+
+.about-us-logos {
+  border-top: 1px solid var(--color-primary);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.about-us-logos img {
+  max-height: 3.75rem;
+  width: 100%;
+  max-width: 12.5rem;
+  transition: all 0.3s ease;
+  object-fit: contain;
+}
+
+.about-us-vdivider {
+  background-color: var(--color-primary);
+  width: 1px;
+  height: 3.5rem;
+  margin: 0 1.5rem;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.about-us-second-container h2 {
+  font-size: 50px;
+}
+
+.about-us-second-container {
+  padding: 2vw 5vw;
+}
+
+.about-us-second-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ========================
+  SEÇÃO: GRUPO / PERFIL
+======================== */
+.group {
+  padding: 1.25rem 1.25rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary) 0%,
+    var(--color-primary) 90%,
+    var(--color-white) 80%,
+    var(--color-white) 100%
+  );
+  position: relative;
+  overflow: hidden;
+  margin-top: 3.75rem;
+
+  animation: fadeSlideUp 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  animation-delay: 0.2s;
+}
+
+.perfil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8rem 1.875rem;
+  margin-top: 5rem;
+}
+
+.group h2 {
+  font-size: 65px;
+  color: var(--color-white);
+  text-align: left;
+  margin: 0 0 5rem 2.5rem;
+  padding: 0.625rem;
+}
+
+.person {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  padding: 6.25rem 1.875rem 2.5rem;
+  max-width: 20rem;
+  box-shadow: 0 15px 6px rgba(0, 0, 0, 0.25);
+  overflow: visible;
+
+  /* 1) Transição suave só para transform e sombra */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  /* opcional: define o ponto de escala */
+  transform-origin: center center;
+}
+
+.person:hover {
+  /* 2) Aumenta levemente o card */
+  transform: scale(1.05);
+  /* sombra um pouco mais intensa */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.person:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.person:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.person:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.person img {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.person h3 {
+  font-size: var(--fs-name);
+  margin-bottom: 0.75rem;
+}
+
+.person p {
+  margin-bottom: 0.625rem;
+  line-height: 1.6;
+}
+
+.person-title p {
+  font-family: var(--font-bold);
+}
+
+.negrito {
+  font-family: "proxima nova extrabold", sans-serif;
+  font-weight: bold;
+}
+
+/* ========================
+  SEÇÃO: OUR TRACK RECORD
+======================== */
+.our-track-record {
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+.our-track-record h2 {
+  font-family: var(--font-regular);
+  font-size: 65px;
+  color: var(--color-primary);
+  margin: 0 0 1.25rem 2.5rem;
+  padding: 0.625rem;
+  text-align: left;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.875rem;
+}
+
+
+.stat-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  background-color: var(--color-white);
+  padding: 2.5rem 3.75rem;
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-stat);
+  font-family: var(--font-regular);
+  font-size: 3rem;
+  color: var(--color-primary);
+  min-width: 40rem;
+  transition: transform 0.2s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+}
+
+.stat-icon {
+  width: 100px;
+
+  object-fit: contain;
+}
+
+.track-items {
+  list-style: none;
+  padding: 0;
+  margin-top: 5rem;
+  text-align: left; /* garante que o texto fique alinhado à esquerda */
+}
+
+.track-items li {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr; /* 1.25rem para o ícone, o resto para o texto */
+  gap: 0.625rem; /* espaço entre ícone e texto */
+  margin-bottom: 0.875rem;
+  font-family: var(--font-regular);
+  font-size: 30px;
+  color: var(--color-primary);
+  line-height: 1.6;
+}
+
+.track-items .check-icon {
+  width: 3rem; /* 20px */
+  height: auto;
+  align-self: center; /* ícone no topo do texto */
+}
+
+/* Se quiser garantir que nunca haja quebra dentro do número% negrito: */
+.track-items .negrito {
+  white-space: nowrap;
+}
+
+/* ========================
+  ANIMAÇÕES GLOBAIS
+======================== */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================
+  RESPONSIVIDADE GLOBAL
+======================== */
+@media (max-width: 1200px) {
+  .about-us-logos img {
+    max-height: 3.125rem;
+    max-width: 11.25rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 1080px) {
+  .about-us-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-auto-rows: auto; /* quantas linhas forem necessárias */
+    gap: 1rem; /* espaçamento entre os itens */
+    justify-items: center; /* centraliza itens em cada célula */
+    align-items: center; /* centraliza verticalmente */
+  }
+
+  .about-us-logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-auto-rows: auto; /* quantas linhas forem necessárias */
+
+    justify-items: center; /* centraliza itens em cada célula */
+    align-items: center;
+    gap: 50px;
+  }
+  .about-us-vdivider {
+    display: none;
+  }
+
+  .about-us-logos {
+    border: none;
+    margin-top: 30px;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .perfil {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-first-section {
+    margin: 50px 0 50px;
+  }
+  .about-us-logos {
+    justify-content: center;
+  }
+
+  .about-us-divider {
+    display: none;
+  }
+
+  .person {
+    max-width: 90%;
+    padding: 5rem 1rem 2rem;
+  }
+
+  .person img {
+    width: 120px;
+    height: 120px;
+    top: -60px;
+  }
+
+  .stat-box {
+    min-width: 90%;
+    padding: 2rem 1.5rem;
+    font-size: 2.5rem;
+  }
+
+  /* .track-items li {
+    font-size: ;
+  } */
+}
+
+@media (max-width: 480px) {
+  .about-us-title {
+    font-size: 50px;
+  }
+
+  .about-us-logos {
+    grid-template-columns: 1fr;
+  }
+  .person {
+    padding: 4.5rem 1rem 2rem;
+  }
+
+  .person h3 {
+    font-size: 1.125rem;
+  }
+
+  .person p {
+    font-size: 0.875rem;
+  }
+
+  .stat-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .stat-icon {
+    margin-bottom: 1rem;
+  }
+
+  /* 1) Esconde o ícone completamente */
+  .track-items .check-icon {
+    display: none;
+  }
+
+  /* 2) Remove a coluna do ícone da grid */
+  .track-items li {
+    /* antes era 1.25rem 1fr */
+    grid-template-columns: 1fr;
+    /* ou para deixar só uma coluna:
+       grid-template-columns: 1fr; */
+    gap: 0px;
+  }
+}

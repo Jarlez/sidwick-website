@@ -1,0 +1,103 @@
+/* Estilo base */
+.solutions {
+  padding: 2vw 5vw;
+  background-color: white;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.solutions h2 {
+  text-align: left;
+  font-size: 65px;
+  color: #157762;
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-weight: normal;
+}
+
+@media (max-width: 500px) {
+  .font-es h2 {
+    font-size: 60px;
+    word-break: break-word; /* força quebra de palavra se necessário */
+  }
+}
+
+/* 1) Defina a animação */
+@keyframes pulse-diagonal {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(8px, -8px);
+  }
+}
+
+/* 2) Aplique às suas imagens */
+.solution-item img {
+  /* duração, easing e loop infinito */
+  animation: pulse-diagonal 2.5s linear infinite;
+}
+
+.solution-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.solution-item img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.text-content h3 {
+  font-family: "Proxima Nova Extrabold", sans-serif;
+  color: #157762;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.text-content p {
+  font-family: "Proxima Nova Regular", sans-serif;
+  color: #157762;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-top: 10px;
+  word-wrap: break-word;
+}
+
+/* Responsividade para telas menores que 580px */
+@media (max-width: 650px) {
+  .solution-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .solution-item img {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .text-content {
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .text-content h3,
+  .text-content p {
+    text-align: center;
+  }
+}
