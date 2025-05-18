@@ -119,3 +119,9 @@ main {
   min-height: calc(100vh - 260px);
 }
 
+@media (max-width: 560px) {
+  .overlay-text-es  {
+    padding-top: 100px;
+  }
+  
+}
