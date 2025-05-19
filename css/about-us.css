@@ -1,13 +1,10 @@
 /* ========================
   SEÇÃO: ABOUT US
 ======================== */
-.about-us h2,
-.about-us-second-header h2 {
-  font-size: var(--fs-h2);
-}
 
-.about-us-header h2 {
-  font-size: 65px;
+.about-us-header h2,
+.about-us-second-container h2 {
+  font-size: 65px; 
 }
 
 .about-us p,
@@ -19,9 +16,12 @@
 
 .about-us-header p,
 .about-us-first-container p {
-  font-size: 30px;
+  font-size: 25px;
 }
 
+.about-us-first-container {
+  padding-top: 2rem;
+}
 .about-us-text {
   padding: 2vw 5vw;
 }
@@ -145,7 +145,7 @@
 }
 
 .group h2 {
-  font-size: 65px;
+  font-size: 50px;
   color: var(--color-white);
   text-align: left;
   margin: 0 0 5rem 2.5rem;
@@ -242,7 +242,6 @@
   gap: 1.875rem;
 }
 
-
 .stat-box {
   display: flex;
   align-items: center;
@@ -283,7 +282,7 @@
   gap: 0.625rem; /* espaço entre ícone e texto */
   margin-bottom: 0.875rem;
   font-family: var(--font-regular);
-  font-size: 30px;
+  font-size: 25px;
   color: var(--color-primary);
   line-height: 1.6;
 }

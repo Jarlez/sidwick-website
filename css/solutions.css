@@ -8,7 +8,7 @@
 
 .solutions h2 {
   text-align: left;
-  font-size: 65px;
+  font-size: 60px;
   color: #157762;
   font-family: "Proxima Nova Regular", sans-serif;
   font-weight: normal;
@@ -100,4 +100,6 @@
   .text-content p {
     text-align: center;
   }
+
+ 
 }

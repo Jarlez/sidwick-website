@@ -24,9 +24,9 @@
 /* Caixa com fundo de imagem */
 .together-box {
   background: linear-gradient(rgba(32, 80, 69, 0.75), rgba(23, 71, 61, 0.75)),
-    url("/images/img-solutions-4.png") no-repeat center center / cover;
+  url("/images/img-solutions-4.png") no-repeat center center / cover;
   border-radius: 15px;
-  padding: 40px 20px;
+  padding: 40px 50px;
   margin: 40px auto;
   font-size: 28px;
   position: relative;
@@ -41,14 +41,13 @@
   font-family: "Proxima Nova Extrabold", sans-serif;
   font-size: 1.3rem;
   font-weight: bolder;
-  margin-left: 20px;
+
 }
 
 .together-box p {
   color: white;
   font-family: "Proxima Nova Regular", sans-serif;
   margin-top: 10px;
-  margin-left: 20px;
   line-height: 1.5;
 }
 
