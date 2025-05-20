@@ -16,7 +16,7 @@
 
 @media (max-width: 500px) {
   .font-es h2 {
-    font-size: 60px;
+    font-size: 50px;
     word-break: break-word; /* força quebra de palavra se necessário */
   }
 }
