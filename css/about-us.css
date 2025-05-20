@@ -4,7 +4,7 @@
 
 .about-us-header h2,
 .about-us-second-container h2 {
-  font-size: 50px; 
+  font-size: 50px;
 }
 
 .about-us p,
@@ -267,6 +267,21 @@
   object-fit: contain;
 }
 
+.stat-number {
+  text-align: start;
+  font-size: 45px; /* ~24px */
+margin: 0;
+  line-height: 1.2;
+}
+
+.stat-label {
+  margin: 0;
+  font-size: 25px; /* ~14px */
+  color: #555555; /* subtom neutro */
+  text-transform: capitalize;
+  line-height: 1.3;
+  font-weight: bold;
+}
 .track-items {
   list-style: none;
   padding: 0;

@@ -145,8 +145,8 @@ body {
 .flip-card {
   perspective: 1000px;
   /* mantém o mesmo tamanho dos seus .circle */
-  width: clamp(160px, 20vw, 180px);
-  height: clamp(160px, 20vw, 180px);
+  width: clamp(220px, 20vw, 220px);
+  height: clamp(220px, 20vw, 220px);
 }
 
 .flip-inner {
@@ -183,13 +183,14 @@ body {
 }
 
 .flip-back {
+  justify-items: center;
   transform: rotateY(180deg);
   background-color: #fff; /* ajuste conforme seu design */
   color: #15754e; /* texto verde */
   padding: 1rem; /* espaço interno */
   box-sizing: border-box;
   text-align: center;
-  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+  font-size: 13px;
   line-height: 1.3;
   overflow: hidden;
   display: -webkit-box;
@@ -214,8 +215,8 @@ body {
   gap: 3rem;
 }
 .circle {
-  width: clamp(160px, 20vw, 180px);
-  height: clamp(160px, 20vw, 180px);
+  width: clamp(220px, 20vw, 220px);
+  height: clamp(220px, 20vw, 220px);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -251,14 +252,18 @@ body {
   align-items: center;
   text-align: center;
   padding: 1rem;
-  font-size: 0.85rem;
+  font-size: 15px;
   line-height: 1.3;
-  width: clamp(160px, 20vw, 180px);
-  height: clamp(160px, 20vw, 180px);
+  width: clamp(220px, 20vw, 220px);
+  height: clamp(220px, 20vw, 220px);
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   word-break: break-word;
+}
+
+.p {
+  border: 2px solid blue;
 }
 
 .home-3 .circle4 p {
@@ -369,6 +374,19 @@ body {
 
 .gallery img {
   width: 200px;
+}
+
+.gallery-2 {
+  background-color: #ffff;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.gallery-2 img {
+  width: 150px;
 }
 
 /* ========== MEDIA QUERIES ========== */

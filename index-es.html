@@ -263,7 +263,8 @@
                 <div class="about-us-second-header font-es">
                     <h2><span class="font-style">Misión</span> y Valores Fundamentales</h2>
                     <div class="text-content" style="font-size: 23px;">
-                        <p style="font-size: 23px;"><span class="negrito">Nuestra misión:</span> donde el procesamiento financiero se encuentra
+                        <p style="font-size: 23px;"><span class="negrito">Nuestra misión:</span> donde el procesamiento
+                            financiero se encuentra
                             con la atención médica.<br>En Sidwick combinamos <u>lo mejor de ambos mundos:</u>
                             procesamiento financiero y atención médica, ayudando a instituciones de todo el mundo a
                             ingresar a los mercados de América Latina y Asia, identificando las mejores oportunidades de
@@ -271,10 +272,12 @@
                             los sistemas de pago.</p>
                     </div>
                     <div class="text-content" style="font-size: 23px;">
-                        <p style="font-size: 23px;">Todo esto asegurando hitos en empresas exitosas y en funcionamiento.</p>
+                        <p style="font-size: 23px;">Todo esto asegurando hitos en empresas exitosas y en funcionamiento.
+                        </p>
                     </div>
                     <div class="text-content" style="font-size: 23px;">
-                        <p style="font-size: 23px;"><span class="negrito">Nuestros valores fundamentales:</span><br>Compasión – Integridad –
+                        <p style="font-size: 23px;"><span class="negrito">Nuestros valores
+                                fundamentales:</span><br>Compasión – Integridad –
                             Experiencia – Conexiones – Compromiso – Excelencia</p>
                     </div>
                 </div>
@@ -427,177 +430,218 @@
                     Financiera Internacional, OMS)</p>
             </div>
         </section>
-    </main>
 
-    <footer id="footer">
-        <div class="footer-content">
-            <div class="footer-left">
-                <div class="footer-info">
-                    <h3 class="logo-title">SIDWICK</h3>
-                    <p>Av. Corrientes 800, Piso 34, Monserrat, C1043AAU, Ciudad Autónoma de Buenos Aires, Argentina</p>
-                    <p>Contacto: +54 11 2222 3333</p>
-                    <p>Correo electrónico: business@sidwick.com</p>
+
+
+        <section class="slide">
+            <!-- coluna esquerda -->
+            <div class="slide-content">
+                <img src="logo-gensaude.png" alt="Gensaúde" class="logo">
+                <h1>
+                    Plataforma digital de saúde para<br>
+                    prevenção e monitoramento de fatores<br>
+                    de risco de doenças cardiovasculares
+                </h1>
+
+                <div class="slide-footer">
+                    <div class="info-icon"></div>
+                    <div class="date">Janeiro/2025</div>
                 </div>
-                <div class="footer-separator"></div>
             </div>
-            <div class="shortcuts">
-                <button>Nosotros</button>
-                <button>Soluciones</button>
-                <button>Certificaciones</button>
-                <button>Contacto</button>
+
+            <!-- área visual direita -->
+            <div class="slide-visual">
+                <div class="circle-bg"></div>
+                <img src="paciente-enfermeira.jpg" alt="Avaliação clínica" class="circle-img">
+                <div class="corner-triangle"></div>
             </div>
+        </section>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+<footer id="footer">
+    <div class="footer-content">
+        <div class="footer-left">
+            <div class="footer-info">
+                <h3 class="logo-title">SIDWICK</h3>
+                <p>Av. Corrientes 800, Piso 34, Monserrat, C1043AAU, Ciudad Autónoma de Buenos Aires, Argentina</p>
+                <p>Contacto: +54 11 2222 3333</p>
+                <p>Correo electrónico: business@sidwick.com</p>
+            </div>
+            <div class="footer-separator"></div>
         </div>
-        <div class="copyright">
-            <p class="copyright">&copy; Sidwick 2025. Todos los derechos reservados.</p>
+        <div class="shortcuts">
+            <button>Nosotros</button>
+            <button>Soluciones</button>
+            <button>Certificaciones</button>
+            <button>Contacto</button>
         </div>
-    </footer>
+    </div>
+    <div class="copyright">
+        <p class="copyright">&copy; Sidwick 2025. Todos los derechos reservados.</p>
+    </div>
+</footer>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <script>
-        const carouselEl = document.querySelector('#sidwickCarousel');
-        const carousel = new bootstrap.Carousel(carouselEl, {
-            interval: false,
-            touch: true
-        });
+<script>
+    const carouselEl = document.querySelector('#sidwickCarousel');
+    const carousel = new bootstrap.Carousel(carouselEl, {
+        interval: false,
+        touch: true
+    });
 
-        const startZone = 0.3;
-        const endZone = 0.7;
-        let edgeInterval = null;
-        let edgeTimeout = null;
-        let currentZone = null;
-        let isDragging = false;
-        let startX = 0;
+    const startZone = 0.3;
+    const endZone = 0.7;
+    let edgeInterval = null;
+    let edgeTimeout = null;
+    let currentZone = null;
+    let isDragging = false;
+    let startX = 0;
 
-        function clearEdge() {
-            if (edgeInterval) {
-                clearInterval(edgeInterval);
-                edgeInterval = null;
-            }
-            if (edgeTimeout) {
-                clearTimeout(edgeTimeout);
-                edgeTimeout = null;
-            }
-            currentZone = null;
+    function clearEdge() {
+        if (edgeInterval) {
+            clearInterval(edgeInterval);
+            edgeInterval = null;
         }
-
-
-        function handleEdgeSlide(e) {
-            // se for mobile/tablet (abaixo de 768px), não faz nada aqui
-            if (window.innerWidth < 768) {
-                clearEdge();
-                return;
-            }
-
-            // caso contrário, segue o zone-slide normalmente
-            const { left, width } = carouselEl.getBoundingClientRect();
-            const x = e.clientX - left;
-            const pct = x / width;
-
-            let newZone = null;
-            if (pct < startZone) newZone = 'left';
-            else if (pct > endZone) newZone = 'right';
-
-            if (newZone !== currentZone) {
-                if (newZone) scheduleEdgeSlide(newZone);
-                else clearEdge();
-            }
+        if (edgeTimeout) {
+            clearTimeout(edgeTimeout);
+            edgeTimeout = null;
         }
+        currentZone = null;
+    }
 
-        carouselEl.addEventListener('mousemove', handleEdgeSlide);
 
-        carouselEl.addEventListener('mouseleave', clearEdge);
-        function scheduleEdgeSlide(newZone) {
-            // limpa qualquer agendamento anterior
+    function handleEdgeSlide(e) {
+        // se for mobile/tablet (abaixo de 768px), não faz nada aqui
+        if (window.innerWidth < 768) {
             clearEdge();
-            currentZone = newZone;
+            return;
+        }
 
-            // aguarda 600ms antes de dar o primeiro slide
-            edgeTimeout = setTimeout(() => {
+        // caso contrário, segue o zone-slide normalmente
+        const { left, width } = carouselEl.getBoundingClientRect();
+        const x = e.clientX - left;
+        const pct = x / width;
+
+        let newZone = null;
+        if (pct < startZone) newZone = 'left';
+        else if (pct > endZone) newZone = 'right';
+
+        if (newZone !== currentZone) {
+            if (newZone) scheduleEdgeSlide(newZone);
+            else clearEdge();
+        }
+    }
+
+    carouselEl.addEventListener('mousemove', handleEdgeSlide);
+
+    carouselEl.addEventListener('mouseleave', clearEdge);
+    function scheduleEdgeSlide(newZone) {
+        // limpa qualquer agendamento anterior
+        clearEdge();
+        currentZone = newZone;
+
+        // aguarda 600ms antes de dar o primeiro slide
+        edgeTimeout = setTimeout(() => {
+            if (newZone === 'left') carousel.prev();
+            if (newZone === 'right') carousel.next();
+
+            // após o primeiro, dispara a cada 800ms
+            edgeInterval = setInterval(() => {
                 if (newZone === 'left') carousel.prev();
-                if (newZone === 'right') carousel.next();
+                else carousel.next();
+            }, 1400);
 
-                // após o primeiro, dispara a cada 800ms
-                edgeInterval = setInterval(() => {
-                    if (newZone === 'left') carousel.prev();
-                    else carousel.next();
-                }, 1400);
+        }, 600);
+    }
 
-            }, 600);
+    // mousemove → detecta zona e agenda slide
+    carouselEl.addEventListener('mousemove', e => {
+        if (isDragging) return;         // não dispara zona enquanto arrasta
+
+        const { left, width } = carouselEl.getBoundingClientRect();
+        const pct = (e.clientX - left) / width;
+        let newZone = null;
+        if (pct < startZone) newZone = 'left';
+        else if (pct > endZone) newZone = 'right';
+
+        if (newZone !== currentZone) {
+            if (newZone) scheduleEdgeSlide(newZone);
+            else clearEdge();
+        }
+    });
+
+    // limpa ao sair
+    carouselEl.addEventListener('mouseleave', clearEdge);
+
+    // restaura drag/swipe (igual antes)
+    carouselEl.addEventListener('mousedown', e => {
+        isDragging = true;
+        startX = e.clientX;
+        clearEdge();
+    });
+    document.addEventListener('mouseup', () => { isDragging = false; });
+    carouselEl.addEventListener('mousemove', e => {
+        if (!isDragging) return;
+        const dx = startX - e.clientX;
+        if (Math.abs(dx) > 50) {
+            dx > 0 ? carousel.next() : carousel.prev();
+            isDragging = false;
+        }
+    });
+    carouselEl.addEventListener('touchstart', e => {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        clearEdge();
+    }, { passive: true });
+    carouselEl.addEventListener('touchend', e => {
+        const dx = startX - e.changedTouches[0].clientX;
+        if (Math.abs(dx) > 40) dx > 0 ? carousel.next() : carousel.prev();
+        isDragging = false;
+    });
+
+    // IIFE para isolar o código
+    (function () {
+        // 1) Pegamos o container de idioma
+        const langSelector = document.querySelector('.language-selector');
+        if (!langSelector) {
+            console.error('Não achei .language-selector no DOM');
+            return;
         }
 
-        // mousemove → detecta zona e agenda slide
-        carouselEl.addEventListener('mousemove', e => {
-            if (isDragging) return;         // não dispara zona enquanto arrasta
+        // 2) Delegamos o clique
+        langSelector.addEventListener('click', e => {
+            const btn = e.target.closest('button');
+            if (!btn) return;                    // se clicou fora de um botão, ignora
+            const lang = btn.dataset.lang;       // lê o data-lang
 
-            const { left, width } = carouselEl.getBoundingClientRect();
-            const pct = (e.clientX - left) / width;
-            let newZone = null;
-            if (pct < startZone) newZone = 'left';
-            else if (pct > endZone) newZone = 'right';
-
-            if (newZone !== currentZone) {
-                if (newZone) scheduleEdgeSlide(newZone);
-                else clearEdge();
+            if (lang === 'es') {
+                window.location.href = 'index-es.html';
+            }
+            else if (lang === 'en') {
+                window.location.href = 'index.html';
             }
         });
+    })();
 
-        // limpa ao sair
-        carouselEl.addEventListener('mouseleave', clearEdge);
-
-        // restaura drag/swipe (igual antes)
-        carouselEl.addEventListener('mousedown', e => {
-            isDragging = true;
-            startX = e.clientX;
-            clearEdge();
-        });
-        document.addEventListener('mouseup', () => { isDragging = false; });
-        carouselEl.addEventListener('mousemove', e => {
-            if (!isDragging) return;
-            const dx = startX - e.clientX;
-            if (Math.abs(dx) > 50) {
-                dx > 0 ? carousel.next() : carousel.prev();
-                isDragging = false;
-            }
-        });
-        carouselEl.addEventListener('touchstart', e => {
-            isDragging = true;
-            startX = e.touches[0].clientX;
-            clearEdge();
-        }, { passive: true });
-        carouselEl.addEventListener('touchend', e => {
-            const dx = startX - e.changedTouches[0].clientX;
-            if (Math.abs(dx) > 40) dx > 0 ? carousel.next() : carousel.prev();
-            isDragging = false;
-        });
-
-        // IIFE para isolar o código
-        (function () {
-            // 1) Pegamos o container de idioma
-            const langSelector = document.querySelector('.language-selector');
-            if (!langSelector) {
-                console.error('Não achei .language-selector no DOM');
-                return;
-            }
-
-            // 2) Delegamos o clique
-            langSelector.addEventListener('click', e => {
-                const btn = e.target.closest('button');
-                if (!btn) return;                    // se clicou fora de um botão, ignora
-                const lang = btn.dataset.lang;       // lê o data-lang
-
-                if (lang === 'es') {
-                    window.location.href = 'index-es.html';
-                }
-                else if (lang === 'en') {
-                    window.location.href = 'index.html';
-                }
-            });
-        })();
-
-    </script>
+</script>
 
 </body>
 
