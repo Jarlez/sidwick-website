@@ -82,6 +82,21 @@
   padding: 1rem;
 }
 
+.certifications-img {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap:wrap;
+}
+
+.cert {
+  margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.certifications-img img {
+  width: 200px;
+}
 .about-us-logos img {
   max-height: 3.75rem;
   width: 100%;
