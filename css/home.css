@@ -377,9 +377,10 @@ body {
 }
 
 .gallery-2 {
+  padding: 50px 0 50px;
   background-color: #ffff;
-  height: 20vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 3rem;
@@ -407,6 +408,10 @@ body {
   .cards-grid {
     grid-template-columns: 1fr;
     width: 290px;
+  }
+  .text-logo {
+    flex-direction: column;
+    justify-items: start;
   }
 }
 

@@ -23,20 +23,33 @@
 
 /* Caixa com fundo de imagem */
 .together-box {
+  margin: 50px 50px;
   background: linear-gradient(rgba(32, 80, 69, 0.75), rgba(23, 71, 61, 0.75)),
     url("/images/img-solutions-4.png") no-repeat center center / cover;
   border-radius: 15px;
-  padding: 40px 50px;
-  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+
+  /* 1) Define uma altura mínima para poder centrar verticalmente */
+  min-height: 300px; /* ajuste conforme sua necessidade */
+  /* ou height: 50vh; se quiser baseado em viewport */
+
+  /* 2) Centraliza no eixo principal (vertical) */
+  justify-content: center;
+
+  /* 3) Centraliza no eixo cruzado (horizontal) */
+
+  /* 4) Espaçamento interno para o texto não “encostar” */
+  padding: 2rem;
+
   font-size: 28px;
-  position: relative;
 }
 
 .title-box {
   font-size: 2em;
 }
 
-.together-box span {
+.together-box-title {
   color: white;
   font-family: "Proxima Nova Extrabold", sans-serif;
   font-size: 1.3rem;
@@ -44,15 +57,21 @@
 }
 
 .together-box p {
+  padding-top: 10px;
   color: white;
   font-family: "Proxima Nova Regular", sans-serif;
-  margin-top: 10px;
   line-height: 1.5;
+}
+.together-box h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0; /* remove margem superior e inferior */
+  padding: 0;
 }
 
 /* Estilização para a MSW e MSA */
 .certifications .MSW,
-.certifications .MSA {
+.MSA {
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -62,20 +81,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
   gap: 20px;
 }
 
 /* Estilo das caixas */
 .box {
   display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente */
+  align-items: center; /* centraliza horizontalmente */
+
   background-color: white;
   color: #006b5f;
   padding: 15px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   text-align: center;
-  align-items: center;
+
   width: clamp(20rem, 50%, 25rem);
   height: clamp(12rem, 20vw, 10rem);
   font-size: 1.6em;
@@ -107,4 +129,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (max-width: 520px) {
+  .together-box h2 {
+    font-size: 34px;
+  }
 }
