@@ -67,12 +67,15 @@
   font-weight: bold;
   margin: 0; /* remove margem superior e inferior */
   padding: 0;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /* Estilização para a MSW e MSA */
 .certifications .MSW,
 .MSA {
-  padding: 20px;
+  padding: 25px;
   display: flex;
   justify-content: center;
 }
@@ -93,12 +96,12 @@
 
   background-color: white;
   color: #006b5f;
-  padding: 15px 20px;
+  padding: 15px 15px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
   text-align: center;
 
-  width: clamp(20rem, 50%, 25rem);
+  width: clamp(19rem, 50%, 25rem);
   height: clamp(12rem, 20vw, 10rem);
   font-size: 1.6em;
   font-family: "Proxima Nova", sans-serif;
@@ -132,6 +135,12 @@
 }
 
 @media (max-width: 520px) {
+  .together-box h2 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 330px) {
   .together-box h2 {
     font-size: 34px;
   }

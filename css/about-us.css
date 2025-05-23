@@ -86,12 +86,12 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 .cert {
   margin-top: 30px;
-margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .certifications-img img {
@@ -293,13 +293,13 @@ margin-bottom: 30px;
   margin: 0;
   font-size: 25px; /* ~14px */
   color: #555555; /* subtom neutro */
-  text-transform: capitalize;
   line-height: 1.3;
   font-weight: bold;
 }
-.track-items {
+.track-items,
+.track-items ul {
+  padding: 2.5rem 3rem;
   list-style: none;
-  padding: 0;
   margin-top: 5rem;
   text-align: left; /* garante que o texto fique alinhado à esquerda */
 }
@@ -325,6 +325,10 @@ margin-bottom: 30px;
 /* Se quiser garantir que nunca haja quebra dentro do número% negrito: */
 .track-items .negrito {
   white-space: nowrap;
+}
+
+.soluciones-es h2 {
+  font-size: 50px;
 }
 
 /* ========================
@@ -465,5 +469,13 @@ margin-bottom: 30px;
     /* ou para deixar só uma coluna:
        grid-template-columns: 1fr; */
     gap: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-second-container h2,
+  .about-us-header h2,
+  .soluciones-es h2 {
+    font-size: 45px;
   }
 }

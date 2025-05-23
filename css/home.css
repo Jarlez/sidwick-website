@@ -16,7 +16,8 @@ body {
 /* ========== UTILITÁRIOS ========== */
 
 /* ========== HOME 1 ========== */
-.home-1 {
+.home-1,
+.home-1-es {
   position: relative;
   display: flex;
   padding: 2vw 5vw;
@@ -28,6 +29,11 @@ body {
 .overlay-text-1 {
   max-width: 550px;
 }
+
+.overlay-text-es {
+  max-width: 600px;
+}
+
 .overlay-text-2 {
   max-width: 800px;
 }
@@ -37,11 +43,13 @@ body {
   line-height: 1.1;
 }
 
-.home-1 h1 {
+.home-1 h1,
+.home-1-es h1 {
   font-size: 70px;
 }
 
-.home-1 p {
+.home-1 p,
+.home-1-es p {
   font-size: 20px;
 }
 
@@ -351,6 +359,10 @@ body {
   font-size: 20px;
 }
 
+.cards-grid .card h3 {
+  position: relative;
+}
+
 /* ========== HOME 5 ========== */
 .home-5 {
   background: white;
@@ -407,8 +419,9 @@ body {
   }
   .cards-grid {
     grid-template-columns: 1fr;
-    width: 290px;
+    max-width: 300px;
   }
+
   .text-logo {
     flex-direction: column;
     justify-items: start;
@@ -416,23 +429,36 @@ body {
 }
 
 @media (max-width: 520px) {
-  .home-1,
-  .home-2 {
-    padding: 2rem 1rem;
-  }
-
   .home-1 h1,
+  .home-1-es h1,
   .home-2 h1 {
     font-size: 60px;
   }
-  .icons-intern {
-    flex-direction: column; /* um ícone embaixo do outro */
-    gap: 30px;
-    margin: auto;
-  }
 
-  .circle-container,
-  .block {
-    flex-direction: column;
+  .home-1,
+  .home-2 {
+    padding: 8rem 1rem;
+  }
+}
+.icons-intern {
+  flex-direction: column; /* um ícone embaixo do outro */
+  gap: 30px;
+  margin: auto;
+}
+
+.circle-container,
+.block {
+  flex-direction: column;
+}
+
+@media (max-width: 620px) {
+  .home-1-es {
+    padding: 7rem 1rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-1-es {
+    padding: 2rem 1rem;
   }
 }
