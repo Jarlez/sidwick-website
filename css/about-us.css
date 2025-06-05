@@ -30,14 +30,14 @@
   border-bottom: 2px solid var(--color-primary);
 }
 
-.icon-mastercard,
-.icon-mastercard img {
+.icon-flag,
+.icon-flag img {
   display: inline-block;
   vertical-align: middle; /* alinha o ícone no meio da linha de texto */
 }
 
-.icon-mastercard img {
-  width: 3em; /* tamanho igual ao font‐size do texto */
+.icon-flag img {
+  width: 5em; /* tamanho igual ao font‐size do texto */
   height: auto;
   margin: 0 0.25em; /* espaço antes e depois do logo */
 }
